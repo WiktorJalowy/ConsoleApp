@@ -2,15 +2,13 @@
 #include "Book.hpp"
 #include <vector>
 #include <iostream>
-#include <map>
-#include <algorithm>
 
 class Books
 {
     public:
-    void AddBook(std::string name, std::string author, std::string genre, std::string publisher, int year, int numofpages);
-    void DeleteBook(std::string name);
-    void Report(std::string author, std::string genre, std::string publisher);
+    void AddBook();
+    void DeleteBook();
+    void Report();
 
     private:
     void ShowAllBooksByAuthor(std::string author);
