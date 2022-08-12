@@ -12,6 +12,7 @@ int main(int argc, char **argv)
     std::cout << "'a' - add a book\n";
     std::cout << "'d' - delete a book\n";
     std::cout << "'r' - Print a report\n";
+    std::cout << "'s' - Save to file\n";
     std::cout << "'q' - Quit\n";
     std::cin >> choice;
     switch(choice)
@@ -24,6 +25,9 @@ int main(int argc, char **argv)
         break;
       case 'r':
         books.Report();
+        break;
+      case 's':
+        books.SaveToFile();
         break;
       case 'q':
         std::cout << "Thank You!\n";

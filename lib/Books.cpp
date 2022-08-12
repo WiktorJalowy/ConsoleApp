@@ -1,5 +1,6 @@
 #include "Books.hpp"
 #include <map>
+#include <fstream>
 
 void Books::AddBook()
 {
@@ -157,4 +158,26 @@ void Books::ShowBestGenre()
         }
     }
     std::cout << bestgenre << std::endl;
+}
+
+void Books::SaveToFile()
+{
+    std::string path{};
+    std::cout << "Provide a path: ";
+    std::cin >> path;
+    std::cout << std::endl;
+
+    std::ofstream file;
+    file.open(path);
+    for(unsigned int i = 0; i < AllBooks.size(); i++)
+    {
+        file << std::endl;
+        file << AllBooks[i].title << "\t";
+        file << AllBooks[i].author << "\t";
+        file << AllBooks[i].publisher << "\t";
+        file << AllBooks[i].genre << "\t";
+        file << AllBooks[i].year << "\t";
+        file << AllBooks[i].numofpages << "\t";
+    }
+    file.close();
 }

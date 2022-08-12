@@ -9,6 +9,7 @@ class Books
     void AddBook();
     void DeleteBook();
     void Report();
+    void SaveToFile();
 
     private:
     void ShowAllBooksByAuthor(std::string author);
